@@ -12,7 +12,7 @@ const DefaultLayout: FC<Props> = ({ children, meta }) => {
     <div>
       {meta}
       <Navbar />
-      <Container>
+      <Container maxW={"1300px"}>
         <main>{children}</main>
       </Container>
       {/*<Footer />*/}

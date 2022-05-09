@@ -17,15 +17,13 @@ const Navbar: FC = (props: Props) => {
     <Flex justify="space-between" align="center" p="4">
       <Heading fontSize="xl">Blog recipes</Heading>
       <Flex align="center">
-        <Box>
-          <InputSearch />
-        </Box>
-
         <Flex mx="4" align="center">
           <Text mr="4">Recipes</Text>
           <Text>About me</Text>
         </Flex>
-
+        <Box>
+          <InputSearch />
+        </Box>
         <Flex mx="4" align="center">
           <SocialIcon
             icon="/assets/images/instagram.svg"
