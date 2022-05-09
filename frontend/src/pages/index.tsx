@@ -7,7 +7,7 @@ import SEO from "@/components/common/seo";
 const Home: NextPage = () => {
   return (
     <DefaultLayout meta={<SEO title={`${SiteMetaData.siteTitle} | Home`} />}>
-      <Box>Home</Box>
+      Home
     </DefaultLayout>
   );
 };

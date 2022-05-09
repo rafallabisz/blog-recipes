@@ -1,13 +1,7 @@
 import { FC, memo } from "react";
-import { Box, InputRightElement, Text } from "@chakra-ui/react";
-import {
-  Flex,
-  Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
-} from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Text } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
+import InputSearch from "@/components/common/inputs/input-search";
 
 type Props = {};
 
@@ -15,26 +9,14 @@ const Navbar: FC = (props: Props) => {
   return (
     <Flex justify="space-between" align="center" p="4">
       <Heading fontSize="xl">Blog recipes</Heading>
-
       <Flex align="center">
         <Box>
-          <InputGroup>
-            <InputRightElement pointerEvents="none">
-              Lupa
-              {/*<Image*/}
-              {/*  src={"/assets/search.png"}*/}
-              {/*  width="20"*/}
-              {/*  height="20"*/}
-              {/*  priority*/}
-              {/*/>*/}
-            </InputRightElement>
-            <Input type="text" placeholder="Search..." />
-          </InputGroup>
+          <InputSearch />
         </Box>
 
         <Flex mx="4" align="center">
-          <Text mr="4">Home</Text>
-          <Text>Posts</Text>
+          <Text mr="4">Recipes</Text>
+          <Text>About me</Text>
         </Flex>
 
         <Flex mx="4" align="center">
