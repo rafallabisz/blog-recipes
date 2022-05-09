@@ -1,5 +1,5 @@
 import { FC, memo, useState } from "react";
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import Image from "next/image";
 import { useDebouncedCallback } from "use-debounce";
 
@@ -16,14 +16,14 @@ const InputSearch: FC = ({ defaultValue = "" }: Props) => {
 
   return (
     <InputGroup>
-      <InputRightElement pointerEvents="none">
+      <InputLeftElement pointerEvents="none">
         <Image
           src={"/assets/images/search.svg"}
-          width="20"
-          height="20"
+          width="16"
+          height="16"
           priority
         />
-      </InputRightElement>
+      </InputLeftElement>
       <Input
         type="text"
         placeholder="Search..."
