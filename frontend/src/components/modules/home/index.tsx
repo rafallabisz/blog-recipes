@@ -7,16 +7,16 @@ type Props = {};
 const Home: FC<Props> = () => {
   return (
     <div>
-      <Box mb="4" mt={"4"}>
+      {/* <Box mb="4" mt={"4"}>
         <RecipeCard vertical={false} />
-      </Box>
+      </Box> */}
       <Box>
         <Grid
           gridGap="4"
           gridTemplateColumns="repeat(auto-fit,minmax(300px,1fr))"
         >
-          {[1, 2].map((e) => (
-            <GridItem key={e} display="flex" justifyContent="center">
+          {[1, 2].map((e,index) => (
+            <GridItem key={index} display="flex" justifyContent="center">
               <RecipeCard vertical />
             </GridItem>
           ))}

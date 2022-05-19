@@ -23,19 +23,19 @@ const Home: NextPage<Props> = ({ recipes }) => {
   );
 };
 
-// export const getServerSideProps = async () => {
-//   const recipes = await homeService.getRecipes();
-//   return {
-//     props: {
-//       recipes,
-//     },
-//   };
-// };
+export const getServerSideProps = async () => {
+  const recipes = await homeService.getRecipes();
+  return {
+    props: {
+      recipes,
+    },
+  };
+};
 
 // export const getServerSideProps: GetServerSideProps = async (context) => {
 //   const { data } = await axios.get("http://localhost:1337/api/posts");
 //   console.log(data, "data");
-//
+
 //   return { props: { recipes: data } };
 // };
 

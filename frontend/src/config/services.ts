@@ -25,5 +25,5 @@ export const http = Axios.create({
 });
 
 export enum PostsController {
-  POSTS = "/posts/",
+  POSTS = "/posts/?populate=*",
 }

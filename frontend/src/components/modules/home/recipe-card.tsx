@@ -55,7 +55,7 @@ const RecipeCard: FC<Props> = ({ recipe, vertical }) => {
               </Text>
             </Flex>
             {/*<Link href={`${recipe.id}`} passHref>*/}
-            <Link href={`${"recipe.id"}`} passHref>
+            <Link href={`${"/recipe.id"}`} passHref>
               <Button colorScheme="purple">Read More</Button>
             </Link>
           </Flex>

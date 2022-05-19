@@ -1,3 +1,25 @@
+### Add new collection
+run develop server by npm run develop
+create a new collection name
+then below commands
+```
+git add .
+git commit -m "add authors"
+git push heroku master
+```
+
+
+https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/heroku.html#project-updates
+
+### Project updates on heroku
+```
+git add .
+git commit -am "Changes to my-project noted"
+git push heroku HEAD:main
+heroku open
+```
+
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
