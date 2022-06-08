@@ -14,38 +14,28 @@ import { IDataResponse } from "@/utils/common-models";
 import { IRecipe } from "@/components/modules/home/models";
 
 type Props = {
-  recipe?: IDataResponse<IRecipe>;
-  vertical?: boolean;
+  recipe: IDataResponse<IRecipe>;
 };
 
-const RecipeCard: FC<Props> = ({ recipe, vertical }) => {
-  const description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip";
+const RecipeCard: FC<Props> = ({ recipe }) => {
+  const { title, content, cover } = recipe.attributes;
   return (
-    <Box
-      height={vertical ? "auto" : "200px"}
-      boxShadow="md"
-      borderRadius="xl"
-      overflow="hidden"
-    >
-      <Stack direction={vertical ? "column" : "row-reverse"}>
-        <Box width={vertical ? 300 : 600}>
+    <Box height={"auto"} boxShadow="md" borderRadius="xl" overflow="hidden">
+      <Stack direction={"column"}>
+        <Box width={"auto"}>
           <Image
             src={"/assets/images/hero.webp"}
-            height={vertical ? 200 : 300}
-            width={vertical ? 300 : 400}
+            height={200}
+            width={300}
             alt="light"
           />
         </Box>
         <Box padding="4">
           <Heading as="h3" fontSize="2xl" mb="2">
-            Title
-            {/*{recipe.attributes.title}*/}
+            {title}
           </Heading>
           <Text fontSize="md">
-            {vertical
-              ? description.split(" ").splice(0, 20).join(" ") + "..."
-              : description.split(" ").splice(0, 40).join(" ")}
+            {content.split(" ").splice(0, 20).join(" ") + "..."}
           </Text>
           <Flex justify="space-between" align="center">
             <Flex align="center">
@@ -54,8 +44,7 @@ const RecipeCard: FC<Props> = ({ recipe, vertical }) => {
                 {`${"25"}'`}
               </Text>
             </Flex>
-            {/*<Link href={`${recipe.id}`} passHref>*/}
-            <Link href={`${"/recipe.id"}`} passHref>
+            <Link href={`${recipe.id}`} passHref>
               <Button colorScheme="purple">Read More</Button>
             </Link>
           </Flex>

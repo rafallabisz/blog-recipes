@@ -1,23 +1,21 @@
 import { FC, memo } from "react";
 import RecipeCard from "@/components/modules/home/recipe-card";
 import { Box, Grid, GridItem } from "@chakra-ui/react";
+import { IGenericResponse } from "@/utils/common-models";
+import { IRecipe } from "@/components/modules/home/models";
 
-type Props = {};
+type Props = {
+  recipes: IGenericResponse<IRecipe>;
+};
 
-const Home: FC<Props> = () => {
+const Home: FC<Props> = ({ recipes }) => {
   return (
     <div>
-      {/* <Box mb="4" mt={"4"}>
-        <RecipeCard vertical={false} />
-      </Box> */}
       <Box>
-        <Grid
-          gridGap="4"
-          gridTemplateColumns="repeat(auto-fit,minmax(300px,1fr))"
-        >
-          {[1, 2].map((e,index) => (
-            <GridItem key={index} display="flex" justifyContent="center">
-              <RecipeCard vertical />
+        <Grid gridGap="4" gridTemplateColumns="1fr" gridRowGap={10}>
+          {recipes.data.map((recipe) => (
+            <GridItem key={recipe.id} display="flex" justifyContent="center">
+              <RecipeCard recipe={recipe} />
             </GridItem>
           ))}
         </Grid>

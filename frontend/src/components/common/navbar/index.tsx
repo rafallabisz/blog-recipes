@@ -6,6 +6,7 @@ import SocialIcon from "@/components/common/social-icon";
 import SiteMetaData from "@/utils/site-meta-data";
 import styled from "@emotion/styled";
 
+
 const StyledSocialIcon = styled.div`
   margin-left: 16px;
 `;
