@@ -11,6 +11,12 @@ git push heroku master
 
 https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/heroku.html#project-updates
 
+### API Open
+
+```
+heroku open
+```
+
 ### Project updates on heroku
 ```
 git add .
@@ -18,7 +24,6 @@ git commit -am "Changes to my-project noted"
 git push heroku HEAD:main
 heroku open
 ```
-
 
 # 🚀 Getting started with Strapi
 
