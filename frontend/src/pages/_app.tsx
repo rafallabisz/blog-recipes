@@ -1,8 +1,7 @@
 import type { AppProps } from "next/app";
-import "@/styles/globals.css";
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import { createEmotionCache } from '@/styles/createEmotionCache';
-import { useRouter } from 'next/router';
+import { CacheProvider, EmotionCache } from "@emotion/react";
+import { createEmotionCache } from "@/styles/createEmotionCache";
+import "@/styles/bootstrap.min.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -11,14 +10,12 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
-
 const MyApp = (props: MyAppProps) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const router = useRouter();
 
   return (
     <CacheProvider value={emotionCache}>
-            <Component {...pageProps} />
+      <Component {...pageProps} />
     </CacheProvider>
   );
 };
