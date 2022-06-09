@@ -1,5 +1,4 @@
 import { FC, memo } from "react";
-import { Flex, Grid, Heading, Stack } from "@chakra-ui/react";
 import Image from "next/image";
 import styled from "@emotion/styled";
 
@@ -11,8 +10,9 @@ type Props = {};
 
 const Hero: FC<Props> = () => {
   return (
-    <Flex>
-      <Stack flex="1" justify="center" align="center">
+    <div>
+      HERO
+      {/* <Stack flex="1" justify="center" align="center">
         <Stack>
           <Heading fontSize="4xl">I Just Code Every Day,</Heading>
           <Heading fontSize="6xl">That’s Makes Me, </Heading>
@@ -31,8 +31,8 @@ const Hero: FC<Props> = () => {
             objectFit={"cover"}
           />
         </Grid>
-      </Stack>
-    </Flex>
+      </Stack> */}
+    </div>
   );
 };
 

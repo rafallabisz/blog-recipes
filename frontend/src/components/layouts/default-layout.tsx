@@ -1,6 +1,5 @@
 import { FC, ReactNode } from "react";
 import Navbar from "@/components/common/navbar";
-import { Container } from "@chakra-ui/react";
 
 interface Props {
   meta: ReactNode;
@@ -12,9 +11,9 @@ const DefaultLayout: FC<Props> = ({ children, meta }) => {
     <div>
       {meta}
       <Navbar />
-      <Container maxW={"1300px"}>
+      {/* <Container maxW={"1300px"}> */}
         <main>{children}</main>
-      </Container>
+      {/* </Container> */}
       {/*<Footer />*/}
     </div>
   );

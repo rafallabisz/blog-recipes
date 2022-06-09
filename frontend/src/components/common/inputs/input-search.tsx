@@ -1,5 +1,4 @@
 import { FC, memo, useState } from "react";
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import Image from "next/image";
 import { useDebouncedCallback } from "use-debounce";
 
@@ -15,22 +14,23 @@ const InputSearch: FC = ({ defaultValue = "" }: Props) => {
   }, 300);
 
   return (
-    <InputGroup>
-      <InputLeftElement pointerEvents="none">
-        <Image
-          src={"/assets/images/search.svg"}
-          width="16"
-          height="16"
-          priority
-        />
-      </InputLeftElement>
-      <Input
-        type="text"
-        placeholder="Search..."
-        defaultValue={defaultValue}
-        onChange={(e) => handleChangeDebounced(e.target.value)}
-      />
-    </InputGroup>
+    <input placeholder="search"/>
+    // <InputGroup>
+    //   <InputLeftElement pointerEvents="none">
+    //     <Image
+    //       src={"/assets/images/search.svg"}
+    //       width="16"
+    //       height="16"
+    //       priority
+    //     />
+    //   </InputLeftElement>
+    //   <Input
+    //     type="text"
+    //     placeholder="Search..."
+    //     defaultValue={defaultValue}
+    //     onChange={(e) => handleChangeDebounced(e.target.value)}
+    //   />
+    // </InputGroup>
   );
 };
 

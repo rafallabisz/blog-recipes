@@ -11,7 +11,7 @@ Current tech-stack:
 * Heroku
 
 ## Requirements
-* node >= 18.0.0,
+* node === 16.14.2,
 * git >= 2.36.0.
 
 ## Deploy on Vercel
